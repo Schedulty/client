@@ -4,9 +4,7 @@
   "description": "Client for Schedulty api",
   "main": "dist/index.js",
   "scripts": {
-    "build": "npx tsc",
-    "release:patch": "npm version patch && git add package.json && git commit -m patch && git push",
-    "release:minor": "npm version patch && git add package.json && git commit -m patch && git push"
+    "build": "npx tsc"
   },
   "repository": {
     "type": "git",
