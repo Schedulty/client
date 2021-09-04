@@ -1,4 +1,6 @@
 export interface Lesson {
+    subject: string;
+    type: string;
     time: {
         start: string;
         end: string;

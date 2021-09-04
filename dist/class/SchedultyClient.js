@@ -14,7 +14,10 @@ const node_fetch_1 = require("node-fetch");
 class SchedultyClient {
     constructor(apiToken) {
         this.apiToken = apiToken;
-        this.apiUrl = 'https://api.schedulty.ru';
+        this.apiUrl = process.env.SCHEDULTY_API_URL || 'https://api.schedulty.ru';
+        if (this.apiToken.length !== 64) {
+            throw new Error('Invalid token');
+        }
     }
     call(method, params = {}) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -33,7 +36,7 @@ class SchedultyClient {
     }
     setSchedule(schedule) {
         return __awaiter(this, void 0, void 0, function* () {
-            return this.call('/schedule/set', schedule);
+            return this.call('/schedule', schedule);
         });
     }
     checkToken() {
