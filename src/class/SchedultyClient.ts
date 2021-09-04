@@ -25,7 +25,11 @@ export class SchedultyClient {
     return response.json() as unknown as T;
   }
 
-  public constructor(private readonly apiToken: string) {}
+  public constructor(private readonly apiToken: string) {
+    if (this.apiToken.length !== 64) {
+      throw new Error('Invalid token');
+    }
+  }
 
   /**
    * Записать распиание

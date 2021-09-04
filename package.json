@@ -1,10 +1,11 @@
 {
   "name": "@schedulty/client",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Client for Schedulty api",
   "main": "dist/index.js",
   "scripts": {
-    "build": "npx tsc"
+    "build": "npx tsc",
+    "prepublish": "npm run build && git add dist && git commit -m release && git push && npm publish"
   },
   "repository": {
     "type": "git",
