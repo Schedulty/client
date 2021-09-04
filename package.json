@@ -5,7 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "npx tsc",
-    "release": "rm -rf dist && npm run build && git add dist && git commit -m release && git push && npm publish"
+    "release:patch": "npm version patch && git add package.json && git commit -m patch && git push",
+    "release:minor": "npm version patch && git add package.json && git commit -m patch && git push"
   },
   "repository": {
     "type": "git",
