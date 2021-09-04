@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "npx tsc",
-    "prepublish": "npm run build && git add dist && git commit -m release && git push && npm publish"
+    "release": "rm -rf dist && npm run build && git add dist && git commit -m release && git push && npm publish"
   },
   "repository": {
     "type": "git",
