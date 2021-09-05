@@ -6,7 +6,6 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
-    "resolveJsonModule": true,
     "target": "ES2015",
     "sourceMap": true,
     "outDir": "./dist",
